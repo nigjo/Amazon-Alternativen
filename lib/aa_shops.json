@@ -1,0 +1,41 @@
+{
+  "categories": [
+    {
+      "name": "allgemein",
+      "displayName": "🏪 Allgemein (gemischte Produktauswahl)",
+      "position": 10
+    }
+  ],
+  "shops": [
+    {
+      "name": "AvocadoStore",
+      "description": "Marketplace für faire, nachhaltige oder vegane Produkte, vor allem Textilien und Haushaltsgegenstände",
+      "pages": [
+        {
+          "caption": "🇩🇪",
+          "href": "tps://www.avocadostore.de"
+        },
+        {
+          "caption": "🇦🇹",
+          "href": "https://www.avocadostore.at"
+        }
+      ],
+      "categories": [
+        "allgemein"
+      ]
+    },
+    {
+      "name": "Akkurat",
+      "description": "Shop für erneuerbare Energien",
+      "pages": [
+        {
+          "caption": "Akkurat",
+          "href": "https://akkurat-gsv.de/shop"
+        }
+      ],
+      "categories": [
+        "allgemein"
+      ]
+    }
+  ]
+}

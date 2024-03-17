@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/phranck/Amazon-Alternativen/lib/aa_schema.json",
+  "title": "Amazon Alternativen",
+  "description": "Shops to be used alternative to Amazon",
+  "type": "object",
+  "properties": {
+    "categories": {
+      "type": "array",
+      "_comment": "Liste der Kategorien",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string",
+            "_comment": "fallback to 'name'"
+          },
+          "position": {
+            "type": "integer",
+            "_comment": "fallback to unordered position after explizit ordered items"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
+    },
+    "shops": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "caption": {
+                  "type": "string"
+                },
+                "href": {
+                  "type": "string"
+                },
+                "remark": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "_comment": "Verweis auf 'name' in 'categories'"
+          }
+        },
+        "required": [
+          "name",
+          "pages",
+          "categories"
+        ]
+      }
+    }
+  },
+  "required": [
+    "categories",
+    "shops"
+  ]
+}
